@@ -1,3 +1,6 @@
+# Done by Genko Karadimov
+# March 2024
+
 # Function to generate QR code
 def generate_qr_code(text, file_name):
     qr = qrcode.QRCode(
@@ -34,7 +37,7 @@ except ImportError:
     print("If pip is not found, install it :)")
 
 # Adding Libraries
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 import qrcode
 import datetime
@@ -44,19 +47,24 @@ import os
 
 # Constants
 COMPANY_NAME = "IBPhotonics LTD";
-PAPER_WIDTH = 595.27; # paper: A4 Vertical
-PAPER_HEIGHT = 841.89;
+a4_width, a4_height = A4; # paper: A4 Vertical - 210 x 297 mm 
+PAPER_WIDTH = a4_width;
+PAPER_HEIGHT = a4_height;
 QRCODE_SIZE = 92;
-MAR_TOP_INIT = 100;
-MAR_TOP = 105.23625;
-MAR_LEFT_INIT = 25;
-MAR_LEFT = 297.635;
+MAR_TOP_INIT = 84;
+MAR_TOP = 108.94;
+MAR_LEFT_INIT = 20;
+MAR_LEFT = 305.635;
+MAR_TEXT_TO_QR = 6;
+MAR_TEXT_BOTTOM = 12;
+MAR_TEXT_TO_TEXT = 19;
 
 # User inputs
 device_name = 'LDX220C-250u-10H-C3';
-#device_name = input("Please enter type of LDX: ")
+#device_name = 'OEM-LDX250E-100H-C4';
+#device_name = input("Please enter a model of LDX: ")
 date_string = '8-Dec-2023';
-#date_string = input("Please enter a date: ")
+#date_string = input("Please enter a date (as string): ")
 print("Enter a serial numbers (max 8), separated only with space")
 serial_numbers_input = '1215 1216 1217 1218 1219 1220 1221 1222';
 #serial_numbers_input = input("Serial Numbers: ")
@@ -69,31 +77,50 @@ if len(serial_numbers) == 0:
 if len(serial_numbers) > 8:
     print("Only first 8 serial numbers will be get!")
 
-# generating QR Codes
+# Generating QR Codes
 for index, element in enumerate(serial_numbers):
     text = COMPANY_NAME + "\n" + device_name + "\nS/N: " + element + "\n" + date_string;
     generate_qr_code(text, "qrcode" + str(index) + ".png")
 
-# creating sheeet
+# Creating sheeet
 formatted_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 file_name = f"labels_for_ldx_{formatted_datetime}.pdf"
-c = canvas.Canvas(file_name, pagesize=(PAPER_WIDTH, PAPER_HEIGHT)) # size of A4 - Vertically
+c = canvas.Canvas(file_name, pagesize=A4)
+# Set bold font
+c.setFont("Helvetica", 14)  # Adjust font name and size as needed
+    
 
-# adding qr codes to pdf
+# Adding QR codes to pdf
 for index, element in enumerate(serial_numbers):
     x = MAR_LEFT_INIT;
     y = PAPER_HEIGHT - MAR_TOP_INIT - index * MAR_TOP;
+    print("element: " + str(index) + " | y: " + str(y))
     c.drawImage("qrcode" + str(index) + ".png", x, y, QRCODE_SIZE, QRCODE_SIZE);
     c.drawImage("qrcode" + str(index) + ".png", x + MAR_LEFT, y, QRCODE_SIZE, QRCODE_SIZE);
     # c.drawImage("qrcode" + str(index) + ".png", x + 2 * MAR_LEFT, y, QRCODE_SIZE, QRCODE_SIZE);
 
-# deleting qrcodes
+# Deleting QR codes
 for index, element in enumerate(serial_numbers):
     os.remove("qrcode" + str(index) + ".png")
 
-# adding texts to pdf
+# Adding texts to pdf
+for index, element in enumerate(serial_numbers):
+    x = MAR_LEFT_INIT + QRCODE_SIZE + MAR_TEXT_TO_QR;
+    y = PAPER_HEIGHT - MAR_TOP_INIT - index * MAR_TOP;
+    c.drawString(x, y + MAR_TEXT_BOTTOM + 3 * MAR_TEXT_TO_TEXT, COMPANY_NAME)
+    c.drawString(x, y + MAR_TEXT_BOTTOM + 2 * MAR_TEXT_TO_TEXT, device_name)
+    c.drawString(x, y + MAR_TEXT_BOTTOM + MAR_TEXT_TO_TEXT, "S/N: " + element)
+    c.drawString(x, y + MAR_TEXT_BOTTOM, date_string)
 
-# saving pdf
+for index, element in enumerate(serial_numbers):
+    x = MAR_LEFT_INIT + QRCODE_SIZE + MAR_TEXT_TO_QR;
+    y = PAPER_HEIGHT - MAR_TOP_INIT - index * MAR_TOP;
+    c.drawString(x + MAR_LEFT, y + MAR_TEXT_BOTTOM + 3 * MAR_TEXT_TO_TEXT, COMPANY_NAME)
+    c.drawString(x + MAR_LEFT, y + MAR_TEXT_BOTTOM + 2 * MAR_TEXT_TO_TEXT, device_name)
+    c.drawString(x + MAR_LEFT, y + MAR_TEXT_BOTTOM + MAR_TEXT_TO_TEXT, "S/N: " + element)
+    c.drawString(x + MAR_LEFT, y + MAR_TEXT_BOTTOM, date_string)
+
+# Saving pdf
 c.save()
 
 
