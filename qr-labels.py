@@ -46,7 +46,7 @@ import os
 
 
 # Constants
-COMPANY_NAME = "IBPhotonics LTD";
+COMPANY_NAME = "IBPhotonics LTD"; # first text row of label
 a4_width, a4_height = A4; # paper: A4 Vertical - 210 x 297 mm 
 PAPER_WIDTH = a4_width;
 PAPER_HEIGHT = a4_height;
@@ -60,14 +60,10 @@ MAR_TEXT_BOTTOM = 12;
 MAR_TEXT_TO_TEXT = 19;
 
 # User inputs
-device_name = 'LDX220C-250u-10H-C3';
-#device_name = 'OEM-LDX250E-100H-C4';
-#device_name = input("Please enter a model of LDX: ")
-date_string = '8-Dec-2023';
-#date_string = input("Please enter a date (as string): ")
+device_name = input("Please enter a model of LDX: ")
+date_string = input("Please enter a date (as string): ")
 print("Enter a serial numbers (max 8), separated only with space")
-serial_numbers_input = '1215 1216 1217 1218 1219 1220 1221 1222';
-#serial_numbers_input = input("Serial Numbers: ")
+serial_numbers_input = input("Serial Numbers: ")
 
 # Validating user`s input
 serial_numbers = serial_numbers_input.split()
@@ -94,7 +90,6 @@ c.setFont("Helvetica", 14)  # Adjust font name and size as needed
 for index, element in enumerate(serial_numbers):
     x = MAR_LEFT_INIT;
     y = PAPER_HEIGHT - MAR_TOP_INIT - index * MAR_TOP;
-    print("element: " + str(index) + " | y: " + str(y))
     c.drawImage("qrcode" + str(index) + ".png", x, y, QRCODE_SIZE, QRCODE_SIZE);
     c.drawImage("qrcode" + str(index) + ".png", x + MAR_LEFT, y, QRCODE_SIZE, QRCODE_SIZE);
     # c.drawImage("qrcode" + str(index) + ".png", x + 2 * MAR_LEFT, y, QRCODE_SIZE, QRCODE_SIZE);
