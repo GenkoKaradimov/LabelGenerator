@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Drawing;
+using System.Drawing.Imaging;
+using QRCoder;
+using iText.IO.Image;
+using Image = iTextSharp.text.Image;
 
 
 namespace LabelGenerator
@@ -33,39 +39,17 @@ namespace LabelGenerator
                     float x = param.CellWidth * col + param.ContentToLeftCellBorder;
                     float y = param.CellHeight * row + param.ContentToBottomCellBorder;
 
+                    AddText(writer, data.CompanyName, x + param.ImageSize + param.DistanceImageToText, y);
+                    AddText(writer, data.ProductName, x + param.ImageSize + param.DistanceImageToText, y - param.TextHeight);
+                    AddText(writer, data.DisplayDateTime, x + param.ImageSize + param.DistanceImageToText, y - 2 * param.TextHeight);
+                    AddText(writer, "Serial Number: " + data.SerialNumbers[row], x + param.ImageSize + param.DistanceImageToText, y - 3 * param.TextHeight);
 
-                    AddText(writer, data.CompanyName, x, y);
-                    AddText(writer, data.ProductName, x, y - param.TextHeight);
-                    AddText(writer, data.DisplayDateTime, x, y - 2 * param.TextHeight);
-                    AddText(writer, "Serial Number: " + data.SerialNumbers[row], x, y - 3 * param.TextHeight);
+                    string qrText = data.CompanyName + System.Environment.NewLine + data.ProductName + System.Environment.NewLine;
+                    qrText += data.DisplayDateTime + System.Environment.NewLine + "Serial Number: " + data.SerialNumbers[row];
+
+                    AddQRCode(document, x, y + param.CorrectionImageVerticalPosition, param.ImageSize, qrText);
                 }
             }
-
-            //AddText(writer, "(x, y)", 100f, 800f);
-            //AddText(writer, "(200, 800)", 200f, 800f);
-            //AddText(writer, "(300, 800)", 300f, 800f);
-            //AddText(writer, "(100, 700)", 100f, 700f);
-            //AddText(writer, "(200, 700)", 200f, 700f);
-            //AddText(writer, "(300, 700)", 300f, 700f);
-            //AddText(writer, "(100, 600)", 100f, 600f);
-            //AddText(writer, "(200, 600)", 200f, 600f);
-            //AddText(writer, "(300, 600)", 300f, 600f);
-            //AddText(writer, "(100, 500)", 100f, 500f);
-            //AddText(writer, "(200, 500)", 200f, 500f);
-            //AddText(writer, "(300, 500)", 300f, 500f);
-            //AddText(writer, "(100, 400)", 100f, 400f);
-            //AddText(writer, "(200, 400)", 200f, 400f);
-            //AddText(writer, "(300, 400)", 300f, 400f);
-            //AddText(writer, "(100, 300)", 100f, 300f);
-            //AddText(writer, "(200, 300)", 200f, 300f);
-            //AddText(writer, "(300, 300)", 300f, 300f);
-            //AddText(writer, "(100, 200)", 100f, 200f);
-            //AddText(writer, "(200, 200)", 200f, 200f);
-            //AddText(writer, "(300, 200)", 300f, 200f);
-            //AddText(writer, "(100, 100)", 100f, 100f);
-            //AddText(writer, "(200, 100)", 200f, 100f);
-            //AddText(writer, "(300, 100)", 300f, 100f);
-            //AddText(writer, "(0, 0)", 0f, 0f);
 
             document.Close();
         }
@@ -80,6 +64,32 @@ namespace LabelGenerator
             cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, text, x, y, 0);
 
             cb.EndText();
+        }
+
+        private void AddQRCode(Document document, float x, float y, float imgSize, string text)
+        {
+            Image img = Image.GetInstance(GenerateQRCode(text));
+            img.SetAbsolutePosition(x, y); // Set the coordinates for the image
+            img.ScaleAbsolute(imgSize, imgSize);
+            document.Add(img);
+        }
+
+        private byte[] GenerateQRCode(string text)
+        {
+            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+            {
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
+                using (QRCode qrCode = new QRCode(qrCodeData))
+                {
+                    Bitmap qrCodeBitmap = qrCode.GetGraphic(20);
+
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        qrCodeBitmap.Save(ms, ImageFormat.Png); 
+                        return ms.ToArray();
+                    }
+                }
+            }
         }
     }
 }

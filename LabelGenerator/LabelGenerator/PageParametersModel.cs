@@ -18,17 +18,29 @@ namespace LabelGenerator
 
         public float TextHeight { get; set; }
 
+        public float ImageSize { get; set; }
+
+        public float DistanceImageToText { get; set; }
+
+        public float CorrectionImageVerticalPosition { get; set; }
+
         public PageParametersModel()
         {
             ContentToLeftCellBorder = 50;
 
             ContentToBottomCellBorder = 50;
 
-            CellWidth = 200;
+            CellWidth = 250;
 
             CellHeight = 110;
 
             TextHeight = 15;
+
+            ImageSize = 65;
+
+            DistanceImageToText = 15;
+
+            CorrectionImageVerticalPosition = -50;
         }
     }
 }

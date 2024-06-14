@@ -74,3 +74,4 @@ D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\System.Threadin
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\BouncyCastle.Crypto.dll
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\itextsharp.dll
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\itextsharp.xml
+D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\QRCoder.dll
