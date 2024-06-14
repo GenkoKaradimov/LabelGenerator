@@ -140,6 +140,7 @@ namespace LabelGenerator
             this.tb_sn1.Name = "tb_sn1";
             this.tb_sn1.Size = new System.Drawing.Size(133, 26);
             this.tb_sn1.TabIndex = 7;
+            this.tb_sn1.Text = "1001";
             // 
             // tb_sn2
             // 
@@ -149,6 +150,7 @@ namespace LabelGenerator
             this.tb_sn2.Name = "tb_sn2";
             this.tb_sn2.Size = new System.Drawing.Size(133, 26);
             this.tb_sn2.TabIndex = 8;
+            this.tb_sn2.Text = "1002";
             // 
             // label4
             // 
@@ -213,6 +215,7 @@ namespace LabelGenerator
             this.tb_sn4.Name = "tb_sn4";
             this.tb_sn4.Size = new System.Drawing.Size(133, 26);
             this.tb_sn4.TabIndex = 13;
+            this.tb_sn4.Text = "1004";
             // 
             // tb_sn3
             // 
@@ -222,6 +225,7 @@ namespace LabelGenerator
             this.tb_sn3.Name = "tb_sn3";
             this.tb_sn3.Size = new System.Drawing.Size(133, 26);
             this.tb_sn3.TabIndex = 12;
+            this.tb_sn3.Text = "1003";
             // 
             // label9
             // 
@@ -253,6 +257,7 @@ namespace LabelGenerator
             this.tb_sn8.Name = "tb_sn8";
             this.tb_sn8.Size = new System.Drawing.Size(133, 26);
             this.tb_sn8.TabIndex = 21;
+            this.tb_sn8.Text = "1008";
             // 
             // tb_sn7
             // 
@@ -262,6 +267,7 @@ namespace LabelGenerator
             this.tb_sn7.Name = "tb_sn7";
             this.tb_sn7.Size = new System.Drawing.Size(133, 26);
             this.tb_sn7.TabIndex = 20;
+            this.tb_sn7.Text = "1007";
             // 
             // label11
             // 
@@ -293,6 +299,7 @@ namespace LabelGenerator
             this.tb_sn6.Name = "tb_sn6";
             this.tb_sn6.Size = new System.Drawing.Size(133, 26);
             this.tb_sn6.TabIndex = 17;
+            this.tb_sn6.Text = "1006";
             // 
             // tb_sn5
             // 
@@ -302,6 +309,7 @@ namespace LabelGenerator
             this.tb_sn5.Name = "tb_sn5";
             this.tb_sn5.Size = new System.Drawing.Size(133, 26);
             this.tb_sn5.TabIndex = 16;
+            this.tb_sn5.Text = "1005";
             // 
             // btn_settings
             // 

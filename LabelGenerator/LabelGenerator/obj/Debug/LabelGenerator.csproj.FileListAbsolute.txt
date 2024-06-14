@@ -71,3 +71,6 @@ D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\Microsoft.Exten
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\Newtonsoft.Json.xml
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\BouncyCastle.Crypto.dll
+D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\itextsharp.dll
+D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\itextsharp.xml
