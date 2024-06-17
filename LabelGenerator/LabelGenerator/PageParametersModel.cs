@@ -26,21 +26,21 @@ namespace LabelGenerator
 
         public PageParametersModel()
         {
-            ContentToLeftCellBorder = 45;
+            ContentToLeftCellBorder = 45f;
 
-            ContentToBottomCellBorder = 75;
+            ContentToBottomCellBorder = 75f;
 
-            CellWidth = 294;
+            CellWidth = 294.3f;
 
-            CellHeight = 104;
+            CellHeight = 104.8f;
 
-            TextHeight = 15;
+            TextHeight = 15f;
 
-            ImageSize = 65;
+            ImageSize = 65f;
 
-            DistanceImageToText = 15;
+            DistanceImageToText = 15f;
 
-            CorrectionImageVerticalPosition = -50;
+            CorrectionImageVerticalPosition = -50f;
         }
     }
 }

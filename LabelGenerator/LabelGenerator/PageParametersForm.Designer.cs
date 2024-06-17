@@ -67,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 59);
+            this.label2.Location = new System.Drawing.Point(248, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 20);
             this.label2.TabIndex = 2;
@@ -76,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(248, 59);
+            this.label3.Location = new System.Drawing.Point(248, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 20);
             this.label3.TabIndex = 4;
@@ -94,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(248, 121);
+            this.label5.Location = new System.Drawing.Point(13, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 8;
@@ -112,7 +112,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 260);
+            this.label7.Location = new System.Drawing.Point(248, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 20);
             this.label7.TabIndex = 14;
@@ -121,7 +121,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(248, 188);
+            this.label8.Location = new System.Drawing.Point(13, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 12;
@@ -191,7 +191,7 @@
             // 
             // tb_contentToLeftCellBorder
             // 
-            this.tb_contentToLeftCellBorder.Location = new System.Drawing.Point(17, 87);
+            this.tb_contentToLeftCellBorder.Location = new System.Drawing.Point(252, 144);
             this.tb_contentToLeftCellBorder.Name = "tb_contentToLeftCellBorder";
             this.tb_contentToLeftCellBorder.Size = new System.Drawing.Size(120, 26);
             this.tb_contentToLeftCellBorder.TabIndex = 23;
@@ -212,7 +212,7 @@
             // 
             // tb_cellHeight
             // 
-            this.tb_cellHeight.Location = new System.Drawing.Point(252, 144);
+            this.tb_cellHeight.Location = new System.Drawing.Point(17, 87);
             this.tb_cellHeight.Name = "tb_cellHeight";
             this.tb_cellHeight.Size = new System.Drawing.Size(120, 26);
             this.tb_cellHeight.TabIndex = 26;
@@ -226,14 +226,14 @@
             // 
             // tb_imageSize
             // 
-            this.tb_imageSize.Location = new System.Drawing.Point(252, 211);
+            this.tb_imageSize.Location = new System.Drawing.Point(17, 283);
             this.tb_imageSize.Name = "tb_imageSize";
             this.tb_imageSize.Size = new System.Drawing.Size(120, 26);
             this.tb_imageSize.TabIndex = 28;
             // 
             // tb_distanceImageToText
             // 
-            this.tb_distanceImageToText.Location = new System.Drawing.Point(17, 283);
+            this.tb_distanceImageToText.Location = new System.Drawing.Point(252, 211);
             this.tb_distanceImageToText.Name = "tb_distanceImageToText";
             this.tb_distanceImageToText.Size = new System.Drawing.Size(120, 26);
             this.tb_distanceImageToText.TabIndex = 29;
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 409);
+            this.ClientSize = new System.Drawing.Size(547, 409);
             this.Controls.Add(this.tb_imageVerticalPosition);
             this.Controls.Add(this.tb_distanceImageToText);
             this.Controls.Add(this.tb_imageSize);

@@ -24,15 +24,15 @@ namespace LabelGenerator
 
         private void loadParamsOnForm()
         {
-            tb_contentToLeftCellBorder.Text = _parameters.ContentToLeftCellBorder.ToString();
-            tb_contentToBottomCellBorder.Text = _parameters.ContentToBottomCellBorder.ToString();
-            tb_cellWidth.Text = _parameters.CellWidth.ToString();
-            tb_cellHeight.Text = _parameters.CellHeight.ToString();
+            tb_contentToLeftCellBorder.Text = _parameters.ContentToLeftCellBorder.ToString("F1");
+            tb_contentToBottomCellBorder.Text = _parameters.ContentToBottomCellBorder.ToString("F1");
+            tb_cellWidth.Text = _parameters.CellWidth.ToString("F1");
+            tb_cellHeight.Text = _parameters.CellHeight.ToString("F1");
 
-            tb_textHeight.Text = _parameters.TextHeight.ToString();
-            tb_imageSize.Text = _parameters.ImageSize.ToString();
-            tb_distanceImageToText.Text = _parameters.DistanceImageToText.ToString();
-            tb_imageVerticalPosition.Text = _parameters.CorrectionImageVerticalPosition.ToString();
+            tb_textHeight.Text = _parameters.TextHeight.ToString("F1");
+            tb_imageSize.Text = _parameters.ImageSize.ToString("F1");
+            tb_distanceImageToText.Text = _parameters.DistanceImageToText.ToString("F1");
+            tb_imageVerticalPosition.Text = _parameters.CorrectionImageVerticalPosition.ToString("F1");
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -51,42 +51,42 @@ namespace LabelGenerator
         {
             // save this value and close form
 
-            if (int.TryParse(tb_contentToLeftCellBorder.Text, out int number1))
+            if (float.TryParse(tb_contentToLeftCellBorder.Text, out float number1))
                 _parameters.ContentToLeftCellBorder = number1;
             else
                 MessageBox.Show("Invalid number format of: ContentToLeftCellBorder");
 
-            if (int.TryParse(tb_contentToBottomCellBorder.Text, out int number2))
+            if (float.TryParse(tb_contentToBottomCellBorder.Text, out float number2))
                 _parameters.ContentToBottomCellBorder = number2;
             else
                 MessageBox.Show("Invalid number format of: ContentToBottomCellBorder");
 
-            if (int.TryParse(tb_cellWidth.Text, out int number3))
+            if (float.TryParse(tb_cellWidth.Text, out float number3))
                 _parameters.CellWidth = number3;
             else
                 MessageBox.Show("Invalid number format of: ContentToLeftCellBorder");
 
-            if (int.TryParse(tb_cellHeight.Text, out int number4))
+            if (float.TryParse(tb_cellHeight.Text, out float number4))
                 _parameters.CellHeight = number4;
             else
                 MessageBox.Show("Invalid number format of: CellHeight");
 
-            if (int.TryParse(tb_textHeight.Text, out int number5))
+            if (float.TryParse(tb_textHeight.Text, out float number5))
                 _parameters.TextHeight = number5;
             else
                 MessageBox.Show("Invalid number format of: TextHeight");
 
-            if (int.TryParse(tb_imageSize.Text, out int number6))
+            if (float.TryParse(tb_imageSize.Text, out float number6))
                 _parameters.ImageSize = number6;
             else
                 MessageBox.Show("Invalid number format of: ImageSize");
 
-            if (int.TryParse(tb_distanceImageToText.Text, out int number7))
+            if (float.TryParse(tb_distanceImageToText.Text, out float number7))
                 _parameters.DistanceImageToText = number7;
             else
                 MessageBox.Show("Invalid number format of: DistanceImageToText");
 
-            if (int.TryParse(tb_imageVerticalPosition.Text, out int number8))
+            if (float.TryParse(tb_imageVerticalPosition.Text, out float number8))
                 _parameters.CorrectionImageVerticalPosition = number8;
             else
                 MessageBox.Show("Invalid number format of: CorrectionImageVerticalPosition");
