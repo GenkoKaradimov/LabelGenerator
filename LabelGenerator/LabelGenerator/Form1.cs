@@ -94,5 +94,44 @@ namespace LabelGenerator
                 tb_path.Text = saveFileDialog.FileName;
             }
         }
+
+        private void btn_sn1ToEnd_Click(object sender, EventArgs e)
+        {
+
+            if (this.tb_sn1.Text != "")
+            {
+                if (int.TryParse(this.tb_sn1.Text, out int sn1))
+                {
+                    // MessageBox.Show($"Parsed number: {sn1}");
+                    this.tb_sn2.Text = (sn1 + 1).ToString();
+                    this.tb_sn3.Text = (sn1 + 2).ToString();
+                    this.tb_sn4.Text = (sn1 + 3).ToString();
+                    this.tb_sn5.Text = (sn1 + 4).ToString();
+                    this.tb_sn6.Text = (sn1 + 5).ToString();
+                    this.tb_sn7.Text = (sn1 + 6).ToString();
+                    this.tb_sn8.Text = (sn1 + 7).ToString();
+                    return;
+                }
+            }
+
+            // error
+            MessageBox.Show(
+                    "Value of \"SN1\" must be integer! Subsequent fields will be automatically filled in, each subsequent field being one larger.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+        }
+
+        private void btn_clearSN_Click(object sender, EventArgs e)
+        {
+            this.tb_sn1.Text = "";
+            this.tb_sn2.Text = "";
+            this.tb_sn3.Text = "";
+            this.tb_sn4.Text = "";
+            this.tb_sn5.Text = "";
+            this.tb_sn6.Text = "";
+            this.tb_sn7.Text = "";
+            this.tb_sn8.Text = "";
+        }
     }
 }
