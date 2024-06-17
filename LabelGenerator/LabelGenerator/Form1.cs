@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using iText.Layout;
+using System.Diagnostics;
 
 namespace LabelGenerator
 {
@@ -28,7 +29,8 @@ namespace LabelGenerator
             _parameters = new PageParametersModel();
 
             InitializeComponent();
-            this.tb_dateTime.Text = DateTime.Now.ToString("dd-MMM-yyyy");
+            this.tb_dateTime.Text = DateTime.Now.ToString("dd-MMM-yyyy"); 
+            this.tb_path.Text = Path.Combine(Directory.GetCurrentDirectory(), "example.pdf");
         }
 
         private void btn_generate_Click(object sender, EventArgs e)
@@ -51,38 +53,46 @@ namespace LabelGenerator
 
 
 
-            string pdfPath = "example.pdf";
+            string filePath = this.tb_path.Text;
 
-            _pdf.GeneratePdfPage(data, _parameters, pdfPath);
+            _pdf.GeneratePdfPage(data, _parameters, filePath);
 
-            //using (PdfWriter writer = new PdfWriter(pdfPath))
-            //{
-            //    // Create a PDF document instance
-            //    using (PdfDocument pdf = new PdfDocument(writer))
-            //    {
-            //        // Create a document to add elements
-            //        Document document = new Document(pdf);
+            ReportForm report = new ReportForm(filePath);
+            report.ShowDialog();
+        }
 
-            //        // Add the first row of text
-            //        document.Add(new Paragraph("This is the first row of text."));
+        private void btn_openPathFolder_Click(object sender, EventArgs e)
+        {
+            string filePath = this.tb_path.Text;
 
-            //        // Add the second row of text
-            //        document.Add(new Paragraph("This is the second row of text."));
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    // Use explorer.exe to open the folder and select the file
+                    string argument = "/select, \"" + filePath + "\"";
+                    Process.Start("explorer.exe", argument);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
 
-            //        // Load and add the image
-            //        // ImageData imageData = ImageDataFactory.Create(imagePath);
-            //        // Image image = new Image(imageData);
+        }
 
-            //        // You can set the position and size of the image if needed
-            //        // image.SetFixedPosition(100, 500);  // Example position
-            //        // image.ScaleToFit(200, 200);  // Example size
+        private void btn_changePath_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF (*.pdf)|*.pdf|All (*.*)|*.*";
 
-            //        // document.Add(image);
-
-            //        // Close the document
-            //        document.Close();
-            //    }
-            //}
+            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                tb_path.Text = saveFileDialog.FileName;
+            }
         }
     }
 }

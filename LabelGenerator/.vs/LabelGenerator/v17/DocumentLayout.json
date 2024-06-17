@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Github\\LabelGenerator\\LabelGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|d:\\github\\labelgenerator\\labelgenerator\\labelgenerator\\pageparametersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|solutionrelative:labelgenerator\\pageparametersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|d:\\github\\labelgenerator\\labelgenerator\\labelgenerator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|solutionrelative:labelgenerator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|d:\\github\\labelgenerator\\labelgenerator\\labelgenerator\\pdfgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|solutionrelative:labelgenerator\\pdfgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|d:\\github\\labelgenerator\\labelgenerator\\labelgenerator\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|solutionrelative:labelgenerator\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|d:\\github\\labelgenerator\\labelgenerator\\labelgenerator\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|solutionrelative:labelgenerator\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E70A1AEE-9832-4BDC-9DD1-B7B426488D54}|LabelGenerator\\LabelGenerator.csproj|d:\\github\\labelgenerator\\labelgenerator\\labelgenerator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportForm.cs",
+              "DocumentMoniker": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\ReportForm.cs",
+              "RelativeDocumentMoniker": "LabelGenerator\\ReportForm.cs",
+              "ToolTip": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\ReportForm.cs",
+              "RelativeToolTip": "LabelGenerator\\ReportForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:14:24.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ReportForm.cs [Design]",
+              "DocumentMoniker": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\ReportForm.cs",
+              "RelativeDocumentMoniker": "LabelGenerator\\ReportForm.cs",
+              "ToolTip": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\ReportForm.cs [Design]",
+              "RelativeToolTip": "LabelGenerator\\ReportForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:14:20.522Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\Form1.cs",
               "RelativeDocumentMoniker": "LabelGenerator\\Form1.cs",
@@ -50,39 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PageParametersModel.cs",
-              "DocumentMoniker": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\PageParametersModel.cs",
-              "RelativeDocumentMoniker": "LabelGenerator\\PageParametersModel.cs",
-              "ToolTip": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\PageParametersModel.cs",
-              "RelativeToolTip": "LabelGenerator\\PageParametersModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:21:03.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PdfGenerator.cs",
-              "DocumentMoniker": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\PdfGenerator.cs",
-              "RelativeDocumentMoniker": "LabelGenerator\\PdfGenerator.cs",
-              "ToolTip": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\PdfGenerator.cs",
-              "RelativeToolTip": "LabelGenerator\\PdfGenerator.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwDMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:19:40.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\Form1.cs",
               "RelativeDocumentMoniker": "LabelGenerator\\Form1.cs",
               "ToolTip": "D:\\Github\\LabelGenerator\\LabelGenerator\\LabelGenerator\\Form1.cs",
               "RelativeToolTip": "LabelGenerator\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAA1AAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAiwDsAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T11:30:43.833Z",
               "EditorCaption": ""
