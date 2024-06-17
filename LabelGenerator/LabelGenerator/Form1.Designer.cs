@@ -129,10 +129,10 @@ namespace LabelGenerator
             // btn_generate
             // 
             this.btn_generate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_generate.Location = new System.Drawing.Point(104, 579);
+            this.btn_generate.Location = new System.Drawing.Point(138, 312);
             this.btn_generate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_generate.Name = "btn_generate";
-            this.btn_generate.Size = new System.Drawing.Size(219, 60);
+            this.btn_generate.Size = new System.Drawing.Size(542, 60);
             this.btn_generate.TabIndex = 26;
             this.btn_generate.Text = "Generate";
             this.btn_generate.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@ namespace LabelGenerator
             // tb_sn1
             // 
             this.tb_sn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn1.Location = new System.Drawing.Point(17, 280);
+            this.tb_sn1.Location = new System.Drawing.Point(374, 96);
             this.tb_sn1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn1.Name = "tb_sn1";
             this.tb_sn1.Size = new System.Drawing.Size(133, 26);
@@ -151,7 +151,7 @@ namespace LabelGenerator
             // tb_sn2
             // 
             this.tb_sn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn2.Location = new System.Drawing.Point(190, 280);
+            this.tb_sn2.Location = new System.Drawing.Point(547, 96);
             this.tb_sn2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn2.Name = "tb_sn2";
             this.tb_sn2.Size = new System.Drawing.Size(133, 26);
@@ -162,7 +162,7 @@ namespace LabelGenerator
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 193);
+            this.label4.Location = new System.Drawing.Point(370, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 20);
@@ -173,7 +173,7 @@ namespace LabelGenerator
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 255);
+            this.label5.Location = new System.Drawing.Point(370, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 20);
@@ -184,7 +184,7 @@ namespace LabelGenerator
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(186, 255);
+            this.label6.Location = new System.Drawing.Point(543, 71);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 20);
@@ -195,7 +195,7 @@ namespace LabelGenerator
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(186, 311);
+            this.label7.Location = new System.Drawing.Point(543, 127);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 20);
@@ -206,7 +206,7 @@ namespace LabelGenerator
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 311);
+            this.label8.Location = new System.Drawing.Point(370, 127);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 20);
@@ -216,7 +216,7 @@ namespace LabelGenerator
             // tb_sn4
             // 
             this.tb_sn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn4.Location = new System.Drawing.Point(190, 336);
+            this.tb_sn4.Location = new System.Drawing.Point(547, 152);
             this.tb_sn4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn4.Name = "tb_sn4";
             this.tb_sn4.Size = new System.Drawing.Size(133, 26);
@@ -226,7 +226,7 @@ namespace LabelGenerator
             // tb_sn3
             // 
             this.tb_sn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn3.Location = new System.Drawing.Point(17, 336);
+            this.tb_sn3.Location = new System.Drawing.Point(374, 152);
             this.tb_sn3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn3.Name = "tb_sn3";
             this.tb_sn3.Size = new System.Drawing.Size(133, 26);
@@ -237,7 +237,7 @@ namespace LabelGenerator
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(186, 423);
+            this.label9.Location = new System.Drawing.Point(543, 239);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 20);
@@ -248,7 +248,7 @@ namespace LabelGenerator
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 423);
+            this.label10.Location = new System.Drawing.Point(370, 239);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 20);
@@ -258,7 +258,7 @@ namespace LabelGenerator
             // tb_sn8
             // 
             this.tb_sn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn8.Location = new System.Drawing.Point(190, 448);
+            this.tb_sn8.Location = new System.Drawing.Point(547, 264);
             this.tb_sn8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn8.Name = "tb_sn8";
             this.tb_sn8.Size = new System.Drawing.Size(133, 26);
@@ -268,7 +268,7 @@ namespace LabelGenerator
             // tb_sn7
             // 
             this.tb_sn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn7.Location = new System.Drawing.Point(17, 448);
+            this.tb_sn7.Location = new System.Drawing.Point(374, 264);
             this.tb_sn7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn7.Name = "tb_sn7";
             this.tb_sn7.Size = new System.Drawing.Size(133, 26);
@@ -279,7 +279,7 @@ namespace LabelGenerator
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(186, 367);
+            this.label11.Location = new System.Drawing.Point(543, 183);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 20);
@@ -290,7 +290,7 @@ namespace LabelGenerator
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(13, 367);
+            this.label12.Location = new System.Drawing.Point(370, 183);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 20);
@@ -300,7 +300,7 @@ namespace LabelGenerator
             // tb_sn6
             // 
             this.tb_sn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn6.Location = new System.Drawing.Point(190, 392);
+            this.tb_sn6.Location = new System.Drawing.Point(547, 208);
             this.tb_sn6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn6.Name = "tb_sn6";
             this.tb_sn6.Size = new System.Drawing.Size(133, 26);
@@ -310,7 +310,7 @@ namespace LabelGenerator
             // tb_sn5
             // 
             this.tb_sn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sn5.Location = new System.Drawing.Point(17, 392);
+            this.tb_sn5.Location = new System.Drawing.Point(374, 208);
             this.tb_sn5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_sn5.Name = "tb_sn5";
             this.tb_sn5.Size = new System.Drawing.Size(133, 26);
@@ -320,18 +320,19 @@ namespace LabelGenerator
             // btn_settings
             // 
             this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_settings.Location = new System.Drawing.Point(17, 579);
+            this.btn_settings.Location = new System.Drawing.Point(17, 312);
             this.btn_settings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(60, 60);
+            this.btn_settings.Size = new System.Drawing.Size(106, 60);
             this.btn_settings.TabIndex = 24;
-            this.btn_settings.Text = "S";
+            this.btn_settings.Text = "Settings";
             this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // tb_path
             // 
             this.tb_path.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_path.Location = new System.Drawing.Point(17, 538);
+            this.tb_path.Location = new System.Drawing.Point(17, 264);
             this.tb_path.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_path.Name = "tb_path";
             this.tb_path.ReadOnly = true;
@@ -342,7 +343,7 @@ namespace LabelGenerator
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 503);
+            this.label13.Location = new System.Drawing.Point(13, 229);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 20);
@@ -351,7 +352,7 @@ namespace LabelGenerator
             // 
             // btn_changePath
             // 
-            this.btn_changePath.Location = new System.Drawing.Point(207, 496);
+            this.btn_changePath.Location = new System.Drawing.Point(207, 222);
             this.btn_changePath.Name = "btn_changePath";
             this.btn_changePath.Size = new System.Drawing.Size(116, 34);
             this.btn_changePath.TabIndex = 29;
@@ -361,7 +362,7 @@ namespace LabelGenerator
             // 
             // btn_openPathFolder
             // 
-            this.btn_openPathFolder.Location = new System.Drawing.Point(94, 496);
+            this.btn_openPathFolder.Location = new System.Drawing.Point(94, 222);
             this.btn_openPathFolder.Name = "btn_openPathFolder";
             this.btn_openPathFolder.Size = new System.Drawing.Size(107, 34);
             this.btn_openPathFolder.TabIndex = 30;
@@ -371,7 +372,7 @@ namespace LabelGenerator
             // 
             // btn_clearSN
             // 
-            this.btn_clearSN.Location = new System.Drawing.Point(17, 216);
+            this.btn_clearSN.Location = new System.Drawing.Point(374, 32);
             this.btn_clearSN.Name = "btn_clearSN";
             this.btn_clearSN.Size = new System.Drawing.Size(79, 36);
             this.btn_clearSN.TabIndex = 31;
@@ -381,7 +382,7 @@ namespace LabelGenerator
             // 
             // btn_sn1ToEnd
             // 
-            this.btn_sn1ToEnd.Location = new System.Drawing.Point(104, 216);
+            this.btn_sn1ToEnd.Location = new System.Drawing.Point(461, 32);
             this.btn_sn1ToEnd.Name = "btn_sn1ToEnd";
             this.btn_sn1ToEnd.Size = new System.Drawing.Size(115, 36);
             this.btn_sn1ToEnd.TabIndex = 32;
@@ -393,7 +394,7 @@ namespace LabelGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 690);
+            this.ClientSize = new System.Drawing.Size(695, 384);
             this.Controls.Add(this.btn_sn1ToEnd);
             this.Controls.Add(this.btn_clearSN);
             this.Controls.Add(this.btn_openPathFolder);

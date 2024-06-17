@@ -133,5 +133,11 @@ namespace LabelGenerator
             this.tb_sn7.Text = "";
             this.tb_sn8.Text = "";
         }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            PageParametersForm pageParametersForm = new PageParametersForm(_parameters);
+            pageParametersForm.ShowDialog();
+        }
     }
 }

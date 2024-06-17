@@ -76,3 +76,4 @@ D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\itextsharp.dll
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\itextsharp.xml
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\bin\Debug\QRCoder.dll
 D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\obj\Debug\LabelGenerator.ReportForm.resources
+D:\Github\LabelGenerator\LabelGenerator\LabelGenerator\obj\Debug\LabelGenerator.PageParametersForm.resources
