@@ -26,13 +26,13 @@ namespace LabelGenerator
 
         public PageParametersModel()
         {
-            ContentToLeftCellBorder = 50;
+            ContentToLeftCellBorder = 45;
 
-            ContentToBottomCellBorder = 50;
+            ContentToBottomCellBorder = 75;
 
-            CellWidth = 250;
+            CellWidth = 294;
 
-            CellHeight = 110;
+            CellHeight = 104;
 
             TextHeight = 15;
 
