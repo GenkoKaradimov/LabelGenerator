@@ -31,6 +31,7 @@ namespace LabelGenerator
             try
             {
                 Process.Start(_filePath);
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -51,6 +52,7 @@ namespace LabelGenerator
                     // Use explorer.exe to open the folder and select the file
                     string argument = "/select, \"" + _filePath + "\"";
                     Process.Start("explorer.exe", argument);
+                    this.Close();
                 }
             }
             catch (Exception ex)

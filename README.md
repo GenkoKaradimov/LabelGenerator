@@ -13,10 +13,11 @@ The script should create two identical well centered labels, which will be stuck
 ## Developer`s enviroment
 > We created well-centered labels with default parametes
 
-**OS:** Windows 10 Pro for Workstations 22H2
-**PDF Viewer:** Chrome 125
-**Printer:** Lexmark MX711de
-**Paper:** Self-adhesive labels A4 (2x8 pieces)
+- **OS:** Windows 10 Pro for Workstations 22H2
+- **PDF Viewer:** Chrome 125
+- **Printer:** Lexmark MX711de
+- **Paper:** Self-adhesive labels A4 (2x8 pieces)
+- **Microsoft Visual Studio** Community 2022 (64-bit) Version 17.9.6
 
 ## Contributing Guidelines
 
@@ -27,7 +28,7 @@ The script should create two identical well centered labels, which will be stuck
 - Software is provided "as is", without warranty of any kind.
 
 ## Contact Information
-** Email: ** Genko Karadimov <genko.karadimov@gmail.com>
+Genko Karadimov <genko.karadimov@gmail.com>
 
 ## Acknowledgments
 
