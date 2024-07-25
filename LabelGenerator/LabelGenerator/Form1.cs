@@ -42,14 +42,14 @@ namespace LabelGenerator
                 SerialNumbers = new List<string>()
             };
 
-            data.SerialNumbers.Add(this.tb_sn1.Text);
-            data.SerialNumbers.Add(this.tb_sn2.Text);
-            data.SerialNumbers.Add(this.tb_sn3.Text);
-            data.SerialNumbers.Add(this.tb_sn4.Text);
-            data.SerialNumbers.Add(this.tb_sn5.Text);
-            data.SerialNumbers.Add(this.tb_sn6.Text);
-            data.SerialNumbers.Add(this.tb_sn7.Text);
-            data.SerialNumbers.Add(this.tb_sn8.Text);
+            //data.SerialNumbers.Add(this.tb_sn1.Text);
+            //data.SerialNumbers.Add(this.tb_sn2.Text);
+            //data.SerialNumbers.Add(this.tb_sn3.Text);
+            //data.SerialNumbers.Add(this.tb_sn4.Text);
+            //data.SerialNumbers.Add(this.tb_sn5.Text);
+            //data.SerialNumbers.Add(this.tb_sn6.Text);
+            //data.SerialNumbers.Add(this.tb_sn7.Text);
+            //data.SerialNumbers.Add(this.tb_sn8.Text);
 
 
 
@@ -98,21 +98,21 @@ namespace LabelGenerator
         private void btn_sn1ToEnd_Click(object sender, EventArgs e)
         {
 
-            if (this.tb_sn1.Text != "")
-            {
-                if (int.TryParse(this.tb_sn1.Text, out int sn1))
-                {
-                    // MessageBox.Show($"Parsed number: {sn1}");
-                    this.tb_sn2.Text = (sn1 + 1).ToString();
-                    this.tb_sn3.Text = (sn1 + 2).ToString();
-                    this.tb_sn4.Text = (sn1 + 3).ToString();
-                    this.tb_sn5.Text = (sn1 + 4).ToString();
-                    this.tb_sn6.Text = (sn1 + 5).ToString();
-                    this.tb_sn7.Text = (sn1 + 6).ToString();
-                    this.tb_sn8.Text = (sn1 + 7).ToString();
-                    return;
-                }
-            }
+            //if (this.tb_sn1.Text != "")
+            //{
+            //    if (int.TryParse(this.tb_sn1.Text, out int sn1))
+            //    {
+            //        // MessageBox.Show($"Parsed number: {sn1}");
+            //        this.tb_sn2.Text = (sn1 + 1).ToString();
+            //        this.tb_sn3.Text = (sn1 + 2).ToString();
+            //        this.tb_sn4.Text = (sn1 + 3).ToString();
+            //        this.tb_sn5.Text = (sn1 + 4).ToString();
+            //        this.tb_sn6.Text = (sn1 + 5).ToString();
+            //        this.tb_sn7.Text = (sn1 + 6).ToString();
+            //        this.tb_sn8.Text = (sn1 + 7).ToString();
+            //        return;
+            //    }
+            //}
 
             // error
             MessageBox.Show(
@@ -124,20 +124,18 @@ namespace LabelGenerator
 
         private void btn_clearSN_Click(object sender, EventArgs e)
         {
-            this.tb_sn1.Text = "";
-            this.tb_sn2.Text = "";
-            this.tb_sn3.Text = "";
-            this.tb_sn4.Text = "";
-            this.tb_sn5.Text = "";
-            this.tb_sn6.Text = "";
-            this.tb_sn7.Text = "";
-            this.tb_sn8.Text = "";
+            lb_serialNumbers.Items.Clear();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
             PageParametersForm pageParametersForm = new PageParametersForm(_parameters);
             pageParametersForm.ShowDialog();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
