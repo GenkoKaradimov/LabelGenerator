@@ -39,17 +39,21 @@ namespace LabelGenerator
                 CompanyName = this.tb_companyName.Text,
                 ProductName = this.tb_productName.Text,
                 DisplayDateTime = this.tb_dateTime.Text,
-                SerialNumbers = new List<string>()
+                SerialNumbers = new List<string>(),
+                LabelsPerUnit = 2
             };
 
-            foreach(var item in lb_serialNumbers.Items)
+            if (rb_lpu_4.Checked) data.LabelsPerUnit = 4;
+            if (rb_lpu_8.Checked) data.LabelsPerUnit = 8;
+
+            foreach (var item in lb_serialNumbers.Items)
             {
                 data.SerialNumbers.Add(item.ToString());
             }
 
             string filePath = this.tb_path.Text;
 
-            _pdf.GeneratePdfPage(data, _parameters, filePath);
+            _pdf.GenerateMultiPagePdf(data, _parameters, filePath);
 
             ReportForm report = new ReportForm(filePath);
             report.ShowDialog();

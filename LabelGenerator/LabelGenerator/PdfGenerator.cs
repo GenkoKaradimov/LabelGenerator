@@ -20,7 +20,7 @@ namespace LabelGenerator
     {
         public PdfGenerator() { }
 
-        public void GeneratePdfPage(DataModel data, PageParametersModel param, string filePath)
+        public void GenerateMultiPagePdf(DataModel data, PageParametersModel param, string filePath)
         {
             Document document = new Document(PageSize.A4);
 
@@ -30,26 +30,51 @@ namespace LabelGenerator
             // Open the document to enable writing
             document.Open();
 
-            // each of 8 rows
-            for(int row = 0; row < 8; row++)
+            int labelRowsPerUnit = data.LabelsPerUnit / 2;
+
+            List<string> serialNumbers = new List<string>();
+
+            foreach(string u in data.SerialNumbers)
             {
-                // each of 2 columns
-                for(int col = 0; col < 2; col++)
-                {
-                    float x = param.CellWidth * col + param.ContentToLeftCellBorder;
-                    float y = param.CellHeight * row + param.ContentToBottomCellBorder;
-
-                    AddText(writer, data.CompanyName, x + param.ImageSize + param.DistanceImageToText, y);
-                    AddText(writer, data.ProductName, x + param.ImageSize + param.DistanceImageToText, y - param.TextHeight);
-                    AddText(writer, data.DisplayDateTime, x + param.ImageSize + param.DistanceImageToText, y - 2 * param.TextHeight);
-                    AddText(writer, "Serial Number: " + data.SerialNumbers[row], x + param.ImageSize + param.DistanceImageToText, y - 3 * param.TextHeight);
-
-                    string qrText = data.CompanyName + System.Environment.NewLine + data.ProductName + System.Environment.NewLine;
-                    qrText += data.DisplayDateTime + System.Environment.NewLine + "Serial Number: " + data.SerialNumbers[row];
-
-                    AddQRCode(document, x, y + param.CorrectionImageVerticalPosition, param.ImageSize, qrText);
-                }
+                for(int i = 0; i < labelRowsPerUnit; i++)
+                serialNumbers.Add(u);
             }
+
+            int toAdd = 8 - (serialNumbers.Count % 8);
+
+            for(int i = 0; i <toAdd; i++)
+            {
+                serialNumbers.Add("Empty space");
+            }
+
+            for(int pg = 0; pg < serialNumbers.Count / 8; pg++)
+            {
+                // each of 8 rows on page
+                for (int row = 0; row < 8; row++)
+                {
+                    // each of 2 columns
+                    for (int col = 0; col < 2; col++)
+                    {
+                        float x = param.CellWidth * col + param.ContentToLeftCellBorder;
+                        float y = param.CellHeight * row + param.ContentToBottomCellBorder;
+
+                        AddText(writer, data.CompanyName, x + param.ImageSize + param.DistanceImageToText, y);
+                        AddText(writer, data.ProductName, x + param.ImageSize + param.DistanceImageToText, y - param.TextHeight);
+                        AddText(writer, data.DisplayDateTime, x + param.ImageSize + param.DistanceImageToText, y - 2 * param.TextHeight);
+                        AddText(writer, "Serial Number: " + serialNumbers[row + pg * 8], x + param.ImageSize + param.DistanceImageToText, y - 3 * param.TextHeight);
+
+                        string qrText = data.CompanyName + System.Environment.NewLine + data.ProductName + System.Environment.NewLine;
+                        qrText += data.DisplayDateTime + System.Environment.NewLine + "Serial Number: " + serialNumbers[row + pg * 8];
+
+                        AddQRCode(document, x, y + param.CorrectionImageVerticalPosition, param.ImageSize, qrText);
+
+                    }
+                }
+
+                document.NewPage();
+            }
+
+           
 
             document.Close();
         }

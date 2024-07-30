@@ -15,5 +15,7 @@ namespace LabelGenerator
         public string DisplayDateTime { get; set; }
 
         public List<string> SerialNumbers { get; set; }
+
+        public int LabelsPerUnit { get; set; }
     }
 }
