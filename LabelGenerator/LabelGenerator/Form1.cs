@@ -42,16 +42,10 @@ namespace LabelGenerator
                 SerialNumbers = new List<string>()
             };
 
-            //data.SerialNumbers.Add(this.tb_sn1.Text);
-            //data.SerialNumbers.Add(this.tb_sn2.Text);
-            //data.SerialNumbers.Add(this.tb_sn3.Text);
-            //data.SerialNumbers.Add(this.tb_sn4.Text);
-            //data.SerialNumbers.Add(this.tb_sn5.Text);
-            //data.SerialNumbers.Add(this.tb_sn6.Text);
-            //data.SerialNumbers.Add(this.tb_sn7.Text);
-            //data.SerialNumbers.Add(this.tb_sn8.Text);
-
-
+            foreach(var item in lb_serialNumbers.Items)
+            {
+                data.SerialNumbers.Add(item.ToString());
+            }
 
             string filePath = this.tb_path.Text;
 
@@ -97,29 +91,10 @@ namespace LabelGenerator
 
         private void btn_sn1ToEnd_Click(object sender, EventArgs e)
         {
+            if (tb_newSN.Text == "") return;
 
-            //if (this.tb_sn1.Text != "")
-            //{
-            //    if (int.TryParse(this.tb_sn1.Text, out int sn1))
-            //    {
-            //        // MessageBox.Show($"Parsed number: {sn1}");
-            //        this.tb_sn2.Text = (sn1 + 1).ToString();
-            //        this.tb_sn3.Text = (sn1 + 2).ToString();
-            //        this.tb_sn4.Text = (sn1 + 3).ToString();
-            //        this.tb_sn5.Text = (sn1 + 4).ToString();
-            //        this.tb_sn6.Text = (sn1 + 5).ToString();
-            //        this.tb_sn7.Text = (sn1 + 6).ToString();
-            //        this.tb_sn8.Text = (sn1 + 7).ToString();
-            //        return;
-            //    }
-            //}
-
-            // error
-            MessageBox.Show(
-                    "Value of \"SN1\" must be integer! Subsequent fields will be automatically filled in, each subsequent field being one larger.",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+            lb_serialNumbers.Items.Add(tb_newSN.Text);
+            tb_newSN.Text = "";
         }
 
         private void btn_clearSN_Click(object sender, EventArgs e)
@@ -136,6 +111,17 @@ namespace LabelGenerator
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_sn_generate_Click(object sender, EventArgs e)
+        {
+            GeneratorsForm gens = new GeneratorsForm(this);
+            gens.ShowDialog();
+        }
+
+        public void addSerialNumbers(List<string> serialNumbers)
+        {
+            lb_serialNumbers.Items.AddRange(serialNumbers.ToArray());
         }
     }
 }

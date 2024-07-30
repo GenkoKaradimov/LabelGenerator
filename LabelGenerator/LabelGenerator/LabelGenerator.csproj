@@ -150,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModel.cs" />
+    <Compile Include="GeneratorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratorsForm.Designer.cs">
+      <DependentUpon>GeneratorsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageParametersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratorsForm.resx">
+      <DependentUpon>GeneratorsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageParametersForm.resx">
       <DependentUpon>PageParametersForm.cs</DependentUpon>

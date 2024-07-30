@@ -44,7 +44,7 @@ namespace LabelGenerator
             this.btn_changePath = new System.Windows.Forms.Button();
             this.btn_openPathFolder = new System.Windows.Forms.Button();
             this.btn_clearSN = new System.Windows.Forms.Button();
-            this.btn_sn1ToEnd = new System.Windows.Forms.Button();
+            this.btn_snAdd = new System.Windows.Forms.Button();
             this.lb_serialNumbers = new System.Windows.Forms.ListBox();
             this.btn_sn_generate = new System.Windows.Forms.Button();
             this.rb_lpu_2 = new System.Windows.Forms.RadioButton();
@@ -204,35 +204,20 @@ namespace LabelGenerator
             this.btn_clearSN.UseVisualStyleBackColor = true;
             this.btn_clearSN.Click += new System.EventHandler(this.btn_clearSN_Click);
             // 
-            // btn_sn1ToEnd
+            // btn_snAdd
             // 
-            this.btn_sn1ToEnd.Location = new System.Drawing.Point(339, 34);
-            this.btn_sn1ToEnd.Name = "btn_sn1ToEnd";
-            this.btn_sn1ToEnd.Size = new System.Drawing.Size(79, 26);
-            this.btn_sn1ToEnd.TabIndex = 32;
-            this.btn_sn1ToEnd.Text = "SN Add";
-            this.btn_sn1ToEnd.UseVisualStyleBackColor = true;
-            this.btn_sn1ToEnd.Click += new System.EventHandler(this.btn_sn1ToEnd_Click);
+            this.btn_snAdd.Location = new System.Drawing.Point(519, 34);
+            this.btn_snAdd.Name = "btn_snAdd";
+            this.btn_snAdd.Size = new System.Drawing.Size(43, 26);
+            this.btn_snAdd.TabIndex = 32;
+            this.btn_snAdd.Text = "+";
+            this.btn_snAdd.UseVisualStyleBackColor = true;
+            this.btn_snAdd.Click += new System.EventHandler(this.btn_sn1ToEnd_Click);
             // 
             // lb_serialNumbers
             // 
             this.lb_serialNumbers.FormattingEnabled = true;
             this.lb_serialNumbers.ItemHeight = 20;
-            this.lb_serialNumbers.Items.AddRange(new object[] {
-            "1155",
-            "1948",
-            "9551",
-            "1548",
-            "9359",
-            "2698",
-            "1569",
-            "4789",
-            "3265",
-            "1596",
-            "1487",
-            "1734",
-            "3298",
-            "6945"});
             this.lb_serialNumbers.Location = new System.Drawing.Point(339, 117);
             this.lb_serialNumbers.Name = "lb_serialNumbers";
             this.lb_serialNumbers.Size = new System.Drawing.Size(223, 184);
@@ -246,6 +231,7 @@ namespace LabelGenerator
             this.btn_sn_generate.TabIndex = 34;
             this.btn_sn_generate.Text = "SN Generate";
             this.btn_sn_generate.UseVisualStyleBackColor = true;
+            this.btn_sn_generate.Click += new System.EventHandler(this.btn_sn_generate_Click);
             // 
             // rb_lpu_2
             // 
@@ -296,12 +282,11 @@ namespace LabelGenerator
             // tb_newSN
             // 
             this.tb_newSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_newSN.Location = new System.Drawing.Point(425, 34);
+            this.tb_newSN.Location = new System.Drawing.Point(339, 34);
             this.tb_newSN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_newSN.Name = "tb_newSN";
-            this.tb_newSN.Size = new System.Drawing.Size(137, 26);
+            this.tb_newSN.Size = new System.Drawing.Size(173, 26);
             this.tb_newSN.TabIndex = 37;
-            this.tb_newSN.Text = "IBPhotonics";
             // 
             // Form1
             // 
@@ -312,7 +297,7 @@ namespace LabelGenerator
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_sn_generate);
             this.Controls.Add(this.lb_serialNumbers);
-            this.Controls.Add(this.btn_sn1ToEnd);
+            this.Controls.Add(this.btn_snAdd);
             this.Controls.Add(this.btn_clearSN);
             this.Controls.Add(this.btn_openPathFolder);
             this.Controls.Add(this.btn_changePath);
@@ -356,7 +341,7 @@ namespace LabelGenerator
         private System.Windows.Forms.Button btn_changePath;
         private System.Windows.Forms.Button btn_openPathFolder;
         private System.Windows.Forms.Button btn_clearSN;
-        private System.Windows.Forms.Button btn_sn1ToEnd;
+        private System.Windows.Forms.Button btn_snAdd;
         private System.Windows.Forms.ListBox lb_serialNumbers;
         private System.Windows.Forms.Button btn_sn_generate;
         private System.Windows.Forms.RadioButton rb_lpu_2;
