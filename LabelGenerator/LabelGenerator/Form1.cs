@@ -99,6 +99,8 @@ namespace LabelGenerator
 
             lb_serialNumbers.Items.Add(tb_newSN.Text);
             tb_newSN.Text = "";
+
+            tb_newSN.Focus();
         }
 
         private void btn_clearSN_Click(object sender, EventArgs e)
@@ -126,6 +128,23 @@ namespace LabelGenerator
         public void addSerialNumbers(List<string> serialNumbers)
         {
             lb_serialNumbers.Items.AddRange(serialNumbers.ToArray());
+        }
+
+        private void tb_newSN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //MessageBox.Show("Enter key pressed!");
+
+                if (tb_newSN.Text == "") return;
+
+                lb_serialNumbers.Items.Add(tb_newSN.Text);
+                tb_newSN.Text = "";
+
+                tb_newSN.Focus();
+
+                e.SuppressKeyPress = true; // To prevent the 'ding' sound
+            }
         }
     }
 }

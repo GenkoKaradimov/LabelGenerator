@@ -287,6 +287,7 @@ namespace LabelGenerator
             this.tb_newSN.Name = "tb_newSN";
             this.tb_newSN.Size = new System.Drawing.Size(173, 26);
             this.tb_newSN.TabIndex = 37;
+            this.tb_newSN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_newSN_KeyDown);
             // 
             // Form1
             // 
