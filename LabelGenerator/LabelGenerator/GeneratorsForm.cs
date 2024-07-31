@@ -41,7 +41,7 @@ namespace LabelGenerator
             int count = endNumber - startNumber;
             List<string> sns = new List<string>();
 
-            for(int i = startNumber; i <= count; i++)
+            for(int i = startNumber; i <= count + startNumber; i++)
             {
                 sns.Add(i.ToString());
             }

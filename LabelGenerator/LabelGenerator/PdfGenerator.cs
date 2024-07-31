@@ -41,10 +41,11 @@ namespace LabelGenerator
             }
 
             int toAdd = 8 - (serialNumbers.Count % 8);
+            if (toAdd == 8) toAdd = 0;
 
             for(int i = 0; i <toAdd; i++)
             {
-                serialNumbers.Add("Empty space");
+                serialNumbers.Add(""); // no text - SN can be write manualy
             }
 
             for(int pg = 0; pg < serialNumbers.Count / 8; pg++)

@@ -84,6 +84,16 @@
             // tb_s2e_end
             // 
             this.tb_s2e_end.Location = new System.Drawing.Point(127, 45);
+            this.tb_s2e_end.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.tb_s2e_end.Minimum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            -2147483648});
             this.tb_s2e_end.Name = "tb_s2e_end";
             this.tb_s2e_end.Size = new System.Drawing.Size(100, 26);
             this.tb_s2e_end.TabIndex = 7;
@@ -91,6 +101,16 @@
             // tb_s2e_start
             // 
             this.tb_s2e_start.Location = new System.Drawing.Point(10, 46);
+            this.tb_s2e_start.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.tb_s2e_start.Minimum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            -2147483648});
             this.tb_s2e_start.Name = "tb_s2e_start";
             this.tb_s2e_start.Size = new System.Drawing.Size(100, 26);
             this.tb_s2e_start.TabIndex = 6;
